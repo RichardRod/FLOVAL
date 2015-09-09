@@ -1,0 +1,159 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 30px;
+
+}
+
+header{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+
+#total{
+  /*border: 1px dashed blue;*/
+}
+
+
+#barraNegra{
+  /*border: 1px dashed red;*/
+  background: #8e8e8e;
+  text-align: right;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#barraNegra a{
+
+  text-decoration: none;
+}
+
+#barraNegra a:hover{
+  text-decoration: underline;
+}
+
+#menuPrincipal{
+  /*border: 1px dashed red;*/
+  border-radius: 5px;
+  background: cyan;
+  overflow: hidden;
+  border-bottom: 1px;
+  padding: 20px;
+
+
+}
+
+#menuInteractivo{
+  width: 85%;
+  display: table;
+  table-layout: fixed;
+  float: left;
+}
+
+#menuInteractivo li{
+  display: table-cell;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+#cuadroIzquierdo{
+  border: 1px dashed red;
+  float: left;
+  width: 24.5%;
+  height: 500px;
+  position: relative;
+
+}
+
+#cuadroIzquierdo div{
+  border: 1px dashed red;
+  float: left;
+  width: 100%;
+  height: 50%;
+}
+
+#slider{
+  border: 1px dashed red;
+  float: left;
+  width: 50.5%;
+  height: 500px;
+  position: relative;
+
+}
+
+#cuadroDerecho{
+  border: 1px dashed red;
+  float: left;
+  width: 24.5%;
+  height: 500px;
+  position: relative;
+
+}
+
+#divisionInferior{
+  border: 1px dashed green;
+
+  height: auto;
+  clear: left;
+
+}
+
+#promociones{
+  border: 1px dashed red;
+  height: 200px;
+
+}
+
+
+#publicidad{
+  border: 1px dashed red;
+  height: 100px;
+}
+
+#piePagina{
+  border: 1px dashed yellow;
+
+}
+
+#promocionesDos{
+  border: 1px dashed red;
+  height: 50px;
+}
+
+#contenidoPromociones{
+  border: 1px dashed red;
+  height: 200px;
+}
+
+#contenidoPromociones div{
+  border: 1px dashed red;
+  position: relative;
+  float: left;
+  width: 24.8%;
+  height: 100%;
+}
+
+#branding{
+  border: 1px dashed red;
+  height: auto;
+  text-align: right;
+
+}
+
+#listaLimpia ul{
+  list-style-type: none;
+}
+
+#contenidoPromociones a{
+  text-decoration: none;
+}
+
+#contenidoPromociones a:hover{
+  text-decoration: underline;
+}
