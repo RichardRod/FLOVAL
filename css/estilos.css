@@ -1,0 +1,50 @@
+/*  Header */
+.navbar {
+		margin-bottom: 0px;
+}
+
+.jumbotron {
+	background: #428BCA;
+	color: #FFF;
+	padding: 20px; 0;
+}
+
+#intereses {
+	background: #c0392b;
+  color: #fff;
+	max-height: 340px;
+}
+
+/** Pie de pagina **/
+footer {
+  text-align: right;
+	background: #34495e;
+  color: #fff;
+}
+
+#promocionesDos{
+
+}
+
+#contenidoPromociones{
+
+}
+
+#contenidoPromociones div{
+  float: left;
+  width: 25%;
+
+}
+
+#contenidoPromociones a{
+  text-decoration: none;
+	color: #FFF;
+}
+
+#contenidoPromociones a:hover{
+  text-decoration: underline;
+}
+
+#listaLimpia ul{
+  list-style-type: none;
+}
