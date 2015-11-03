@@ -1,0 +1,32 @@
+#portada {
+  width: 500px;
+}
+
+#titulo {
+  color: #fff;
+  background-color: #3b5998;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#portadaDama {
+  text-align: center;
+  width: 100px;
+}
+
+#tituloZapatillas {
+
+  width: 50%;
+  color: #fff;
+  background-color: #428BCA;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.detalle > li  {
+ 
+list-style-type: none;
+}
