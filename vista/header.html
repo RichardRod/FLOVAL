@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<title>Zapaterías Floval</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="vista/index/css/estilos.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraNavegacion">
+                            <span class="sr-only">Desplegar / Ocultar Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.php" class="navbar-brand">Zapaterías Floval</a>
+                    </div>
+                    <!--Inicia menu -->
+                    <div class="collapse navbar-collapse" id="barraNavegacion">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.php"><i class="fa fa-home"></i></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                    Categorias <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="index.php?control=categorias&accion=todas">Todas las categorías</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="index.php?control=categorias&accion=damas">Dama</a></li>
+                                    <li><a href="index.php?control=categorias&accion=caballeros">Caballero</a></li>
+                                    <li><a href="index.php?control=categorias&accion=boys">Niño</a></li>
+                                    <li><a href="index.php?control=categorias&accion=girls">Niña</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.php?control=catalogo&accion=verCatalogo">Catalogo</a></li>
+                            <li><a href="index.php?control=contacto&accion=contactar"><span class="glyphicon glyphicon-envelope"></span> Contacto</a></li>
+                        </ul>
+
+                        <form action="" class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.php?control=usuario&accion=formulariosPrincipales"><span class="glyphicon glyphicon-user"></span> {usuario}</a></li>
+                            <li><a href="index.php?control=carrito&accion=verCarrito"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>	
+        </header>

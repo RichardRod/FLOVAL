@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><h2>Producto</h2></th>
+                <th><h2>Cantidad</h2></th>
+                <th class="text-center"><h2>Precio</h2></th>
+                <th class="text-center"><h2>Total</h2></th>
+                <th> </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <!--INICIO-->
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                            <div class="media">
+                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="./vista/categorias/img/dama/zapatillas/{imagen}" style="width: 72px; height: 72px;"> </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#"> {nombreProducto}</a></h4>
+                                    <h5 class="media-heading">  Marca: <a href="#"> {marca}</a></h5>
+
+                                </div>
+                            </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <input type="email" class="form-control" id="exampleInputEmail1" value="{cantidad}">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$ {precio}</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$ {total}</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                            <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Quitar
+                            </button></td>
+                    </tr>
+                    <!--FIN-->
+
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h3><strong>$ {subtotalGeneral}</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>I.V.A</h5></td>
+                        <td class="text-right"><h3><strong>$ {iva}</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h2><strong>$ {totalGeneral}</strong></h2></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                            <a href="index.php"><button  type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Continuar Comprando
+                                </button></a></td>
+                        <td>
+                            <a href="http://floval.mx/index.php?control=carrito&accion=Comprar"><button type="button" class="btn btn-success">
+                                    Comprar <span class="glyphicon glyphicon-play"></span>
+                                </button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

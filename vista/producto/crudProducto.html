@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="page-header">Productos</h1>
+
+    <div class="well well-sm text-right">
+        <a class="btn btn-primary" href="?control=producto&accion=agregar&id=0"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Nuevo Producto</a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Existencias</th>
+                <th>Tipo</th>
+                <th>Color</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <th width="100">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{id}</td>
+                <td>{nombreProducto}</td>
+                <td>{marca}</td>
+                <td>{precio}</td>
+                <td>{existencias}</td>
+                <td>{tipo}</td>
+                <td>{color}</td>
+                <td>{descripcion}</td>
+                <td>{imagenUno}</td>
+                <td>
+                    <a href="?control=Producto&accion=Crud&id=<?php echo $row['id'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
+                    <a onclick="return confirm('Eliminar')" href="?control=Producto&accion=Eliminar&id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

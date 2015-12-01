@@ -1,0 +1,58 @@
+<div class="container">
+    <h1 class="page-header">
+        <?php echo $producto["id"] != null ? $producto["nombreProducto"] : 'Nuevo Producto'; ?>
+    </h1>
+    
+    <!--<h2><?php echo 'La magia es: ' . $producto["id"] . ' y ' . count($producto)?></h2>-->
+    
+    <ol class="breadcrumb">
+        <li><a href="?control=Producto">Productos</a></li>
+        <li class="active"><?php echo $producto["id"] != null ? $producto["nombreProducto"] : 'Nuevo Producto'; ?></li>
+    </ol>
+    
+    <form id="formularioProducto" action="?control=Producto&accion=Guardar" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{id}" />
+        
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="nombreProducto" value="{nombreProducto}" class="form-control" placeholder="Nombre del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Marca</label>
+            <input type="text" name="marca" value="{marca}" class="form-control" placeholder="Marca del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Precio</label>
+            <input type="text" name="precio" value="{precio}" class="form-control" placeholder="Precio del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Existencias</label>
+            <input type="text" name="existencias" value="{existencias}" class="form-control" placeholder="Existencias del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Tipo</label>
+            <input type="text" name="tipo" value="{tipo}" class="form-control" placeholder="Tipo del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Color</label>
+            <input type="text" name="color" value="{color}" class="form-control" placeholder="Color del producto" />
+        </div>
+        
+        <div class="form-group">
+            <label>Descripción</label>
+            <input type="text" name="descripcion" value="{descripcion}" class="form-control" placeholder="Descripcion del producto" />
+        </div>
+        
+        <hr />
+    
+        <div class="text-right">
+            <button class="btn btn-success">Guardar</button>
+        </div>
+        
+    </form>
+</div>

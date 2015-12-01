@@ -1,40 +1,91 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Zapaterias Floval</title>
-	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-  	<link rel="stylesheet" href="css/estilosIndex.css">
-</head>
+<?php
 
-<body>
+session_start();
 
-	<?php  
-		include('sections/barraNavegacion.php');
-		include('sections/jumbotron.php');
-		include('sections/sliderPrincipal.php');
-	?>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-				<?php include('sections/muestraProductos.php'); ?>
-			</div>
+$control = null;
+//$_SESSION['userName'] = null;
+//$_SESSION['tipoUsuario'] = -1;
+//$_SESSION['carrito'] = null;
 
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-				<?php include('sections/productosPrincipales.php'); ?>
-			</div>
-		</div>
-	</div>
-		
-		
+switch ($_GET['control']) {
 
+    case 'producto':
+        require_once('controlador/productoControlador.php');
+        $control = new ProductoControlador();
+        break;
 
+    case 'usuario':
+        require_once 'controlador/usuarioControlador.php';
+        $control = new UsuarioControlador();
+        break;
 
+    case 'carrito':
+        require_once('controlador/carritoControlador.php');
+        $control = new CarritoControlador();
+        break;
 
+    case 'categorias':
+        require_once('controlador/categoriasControlador.php');
+        $control = new CategoriasControlador();
 
-	<script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+        break;
 
-</body>
-</html>
+    case 'sesion':
+
+        require_once('controlador/sesionControlador.php');
+        $control = new Sesion();
+
+        break;
+
+    default:
+
+        if (!isset($_SESSION['userName'])) {
+
+            //echo 'No seteada';
+            $cabecera = file_get_contents('vista/header.html');
+            $array = array('{usuario}' => '');
+            $cabecera = strtr($cabecera, $array);
+            $jumbotron = file_get_contents('vista/jumbotron.html');
+            $contenido = file_get_contents('vista/index/contenido.html');
+            $footer = file_get_contents('vista/footer.html');
+        }//fin de if
+        else {
+            
+                if ($_SESSION['tipoUsuario'] == 'administrador') {
+
+                    $cabecera = file_get_contents('vista/headerAdministrador.html');
+                    $jumbotron = file_get_contents('vista/jumbotron.html');
+                    $contenido = file_get_contents('vista/index/contenido.html');
+                    $footer = file_get_contents('vista/footer.html');
+                }  
+                else if ($_SESSION['tipoUsuario'] == 'cliente') {
+
+                    $cabecera = file_get_contents('vista/hedaerLogueado.html');
+                    $jumbotron = file_get_contents('vista/jumbotron.html');
+                    $contenido = file_get_contents('vista/index/contenido.html');
+                    $footer = file_get_contents('vista/footer.html');
+                    
+                    $diccionario = array(
+                        '{usuario}' => $_SESSION['userName'],
+                        '{contadorArticulos}' => count($_SESSION['carrito'])
+                    );
+                    
+                    $cabecera = strtr($cabecera, $diccionario);
+                    
+                    
+                }  
+                
+            
+        }//fin de else
+        
+        
+
+        echo $cabecera . $jumbotron . $contenido . $footer;
+
+        break;
+}//fin de switch
+
+if ($control !== null) {
+    $control->ejecutar();
+    $control = null;
+}//fin de if
